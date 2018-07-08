@@ -3,7 +3,7 @@ Script tonto que lanza un script de powershell en el servidor hyperv 2
 Como se lanza desde el servidor **ansible**
 ```
 ansible-playbook main.yml
-git add . && git commit -am 'Ansible PowerShell.... 1' && git push
+git add . && git commit -am 'Crear equipo en Hyper-V.... 1' && git push
 ```
 Se ha de anadir al fichero: vim /etc/ansible/hosts
 ```
