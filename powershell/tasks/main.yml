@@ -3,3 +3,6 @@
 
 - name: Run powershell script
   script: shared-files/create_vm.ps1 {{ nombre_vm }}
+
+- pause:
+    minutes: 5
