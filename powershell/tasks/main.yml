@@ -6,4 +6,4 @@
 
 - name: Esperando a que arranque el equipo {{ nombre_vm }}
   pause:
-    minutes: 2
+    minutes: 1
