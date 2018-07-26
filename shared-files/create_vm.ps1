@@ -13,7 +13,7 @@ Foreach ($Import in $Import)
     Rename-VM $oldName -NewName $VM
 }
 
-SET-VMProcessor -VMname "$VM" -count $CPU
+SET-VMProcessor -VMname $VM -count $CPU
 Set-VMMemory $VM -StartupBytes $RAM
 
 Start-VM -Name $VM
