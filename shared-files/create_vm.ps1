@@ -1,4 +1,6 @@
 ﻿$VM = $args[0]
+$CPU = $args[1]
+$RAM = $args[2]
 
 new-item "D:\$VM" -itemtype directory
 new-item "D:\$VM\Virtual Hard Disks" -itemtype directory
@@ -10,5 +12,8 @@ Foreach ($Import in $Import)
     $oldName = $Import.Name
     Rename-VM $oldName -NewName $VM
 }
-Start-VM -Name $VM
 
+SET-VMProcessor -VMname "$VM" -count $CPU
+Set-VMMemory $VM -StartupBytes $RAM
+
+Start-VM -Name $VM
